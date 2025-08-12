@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SNX Community</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #000000;
+      overflow-x: hidden;
+    }
+
+    /* Fullscreen background video */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.3);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: black;
+      margin-bottom: 1rem;
+    }
+
+    nav {
+      margin: 1rem 0 2rem;
+    }
+
+    nav a {
+      color: blue;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      border-color: #00f2fe;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .buttons a {
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00f2fe;
+      color: #00f2fe;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      width: 90%;
+      max-width: 300px;
+    }
+
+    .buttons a:hover {
+      background-color: #00f2fe;
+      color: #111;
+    }
+
+    section {
+      padding: 4rem 1rem 2rem;
+      backdrop-filter: blur(5px);
+    }
+
+    #about {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    #gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #333;
+      transition: transform 0.3s;
+    }
+
+    #gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    #music-control {
+      margin-top: 2rem;
+      color: #00f2fe;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="content">
+    <header>
+      <h1>Welcome to SNX FAMILY</h1>
+      <p>Join our Discord and follow us on Instagram for epic content and next-level edits‼️.</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Edits</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About SNX</h2>
+      <p style="color:#ccc; margin-top:1rem;">
+        Hey! I’m SNX — a digital creator, editor, and community builder. Whether it’s fire IG edits or real vibes on Discord, this is the spot for all of it. Join the movement and stay connected with every drop😆.
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>Instagram Edits</h2>
+      <img src="https://via.placeholder.com/400x400.png?text=Edit+1" alt="Edit 1" />
+      <img src="https://via.placeholder.com/400x400.png?text=Edit+2" alt="Edit 2" />
+      <img src="https://via.placeholder.com/400x400.png?text=Edit+3" alt="Edit 3" />
+    </section>
+
+    <section id="links">
+      <h2>Connect With Me</h2>
+      <div class="buttons">
+        <a href="https://discord.gg/sAFSKQmM" target="_blank">Join Our Discord</a>
+        <a href="https://www.instagram.com/____snx_/?next=%2F" target="_blank">Main Instagram Page</a>
+        <a href="https://www.instagram.com/snxeditzzz_/?next=%2F" target="_blank">Edits Instagram Page</a>
+      </div>
+
+      <!-- Background Music -->
+      <div id="music-control" onclick="toggleMusic()">🔊 Play / Pause Music</div>
+      <audio id="bgMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-creativeminds.mp3" type="audio/mp3">
+        Your browser does not support audio.
+      </audio>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 SNX Community. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
